@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+  .full{
+    width:100%;
+  }
+</style>
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" *ngIf="enableSide" id="mySidebar" [style.width]="sidebarWidth">
+  <button class="w3-bar-item w3-button w3-large"
+  (click)="w3_close()">Close &times;</button>
+  <a routerLink='' class="w3-bar-item w3-button">Link 1</a>
+  <a routerLink='' class="w3-bar-item w3-button">Link 2</a>
+  <a routerLink='' class="w3-bar-item w3-button">Link 3</a>
+</div>
+<div class="container full" id="main" [style.marginLeft]="mainMargin">
+<nav class="navbar navbar-default w3-teal">
+  <div class="container-fluid w3-teal">
+    <div class="navbar-header">
+      <button class="w3-button w3-teal w3-xlarge" (click)="w3_open()">&#9776;</button>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="/home" routerLinkActive="active" class="w3-text-white">Home</a></li>
+    </ul>
+  </div>
+</nav>
+  <router-outlet></router-outlet>
+</div>
