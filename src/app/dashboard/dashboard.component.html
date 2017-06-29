@@ -12,14 +12,15 @@
 </style>
 <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" *ngIf="enableSide" id="mySidebar" [style.width]="sidebarWidth">
   <button class="w3-button w3-block w3-left-align full" (click)="toggleAcc()">
-  Accordion <span *ngIf="!showAcc" >&#9660;</span><span *ngIf="showAcc">&#9650;</span>
+  Groups <span *ngIf="!showAcc" >&#9660;</span><span *ngIf="showAcc">&#9650;</span>
   </button>
   <div id="demoAcc" class="w3-bar-block w3-white w3-card-4" *ngIf="showAcc" >
-    <a href="#" class="w3-bar-item w3-button w3-green">Food Sharing Group</a>
-    <a href="#" class="w3-bar-item w3-button w3-green">Link</a>
+    <a routerLink="/gpdetails" class="w3-bar-item w3-button">Food Sharing Group</a>
+    <a routerLink="/gpdetails" class="w3-bar-item w3-button">Link</a>
+    <a routerLink="/gpcreate" class="w3-bar-item w3-button w3-green w3-text-yellow"> Create group +</a>
   </div>
-  <a routerLink='' class="w3-bar-item w3-button">Link 2</a>
-  <a routerLink='' class="w3-bar-item w3-button">Link 3</a>
+  <a routerLink='/gpleader' class="w3-bar-item w3-button">Group Controls</a>
+  <a routerLink='/wbadmin' class="w3-bar-item w3-button">Admin</a>
 </div>
 <div class="full" id="main" [style.marginLeft]="mainMargin">
 <nav class="navbar navbar-default w3-teal">

@@ -11,24 +11,18 @@ export class DashboardComponent implements OnInit {
   public mainMargin='0%';
   public sidebarWidth='0%';
   public showAcc=false;
-  public buttonType='&#9660;';
   constructor() { }
 
   ngOnInit() {
   }
   public toggleAcc(){
-    if(this.showAcc){
-      this.buttonType='&#9660;'
-    }
-    else{
-      this.buttonType='&#9650;'
-    }
     this.showAcc=!(this.showAcc);
   }
   public w3_open(){
     if(this.enableSide){
       this.mainMargin='0%';
       this.sidebarWidth='0%';
+      this.showAcc=false;
     }
     else{
       this.mainMargin='25%';
