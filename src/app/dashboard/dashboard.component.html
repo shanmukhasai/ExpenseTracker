@@ -6,22 +6,30 @@
   .full{
     width:100%;
   }
+  .align-right{
+    position: relative;
+  }
 </style>
 <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" *ngIf="enableSide" id="mySidebar" [style.width]="sidebarWidth">
-  <button class="w3-bar-item w3-button w3-large"
-  (click)="w3_close()">Close &times;</button>
-  <a routerLink='' class="w3-bar-item w3-button">Link 1</a>
+  <button class="w3-button w3-block w3-left-align full" (click)="toggleAcc()">
+  Accordion <span *ngIf="!showAcc" >&#9660;</span><span *ngIf="showAcc">&#9650;</span>
+  </button>
+  <div id="demoAcc" class="w3-bar-block w3-white w3-card-4" *ngIf="showAcc" >
+    <a href="#" class="w3-bar-item w3-button w3-green">Food Sharing Group</a>
+    <a href="#" class="w3-bar-item w3-button w3-green">Link</a>
+  </div>
   <a routerLink='' class="w3-bar-item w3-button">Link 2</a>
   <a routerLink='' class="w3-bar-item w3-button">Link 3</a>
 </div>
-<div class="container full" id="main" [style.marginLeft]="mainMargin">
+<div class="full" id="main" [style.marginLeft]="mainMargin">
 <nav class="navbar navbar-default w3-teal">
   <div class="container-fluid w3-teal">
-    <div class="navbar-header">
-      <button class="w3-button w3-teal w3-xlarge" (click)="w3_open()">&#9776;</button>
-    </div>
+     
     <ul class="nav navbar-nav">
-      <li><a routerLink="/home" routerLinkActive="active" class="w3-text-white">Home</a></li>
+      <li> <a routerLink="" class="w3-text-white w3-animate-left">Expense Tracker</a></li>
+      <li> <button class="w3-button w3-teal w3-xlarge w3-animate-left" (click)="w3_open()" *ngIf="loginVerified">&#9776;</button></li>
+      <li><a routerLink="/home" routerLinkActive="active" class="w3-text-white w3-animate-left">Home</a></li>
+      <li> <button class="w3-button w3-teal w3-xlarge" (click)="hide()">&#9776;</button></li>
     </ul>
   </div>
 </nav>
