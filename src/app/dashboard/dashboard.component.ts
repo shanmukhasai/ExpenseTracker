@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +12,6 @@ export class DashboardComponent implements OnInit {
   public sidebarWidth='0%';
   public showAcc=false;
   constructor() { }
-
   ngOnInit() {
   }
   public toggleAcc(){

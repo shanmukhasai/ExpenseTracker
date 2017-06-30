@@ -16,7 +16,6 @@ const routes: Routes=[
   { path : 'gpdetails', component: GpdetailsComponent },
   { path : 'gpleader' , component: GpleaderComponent },
   { path : 'wbadmin' , component: WbadminComponent },
-  { path: '**', redirectTo: 'home' }
 ]
 
 @NgModule({
